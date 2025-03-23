@@ -4,9 +4,15 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = ({ search, page, setPage }) => {
+  
   const [Data, setData] = useState([]);
   const [totalPage, setTotalPage] = useState(1);
 
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }, [page, search]);
   useEffect(() => {
     axios
       .get(`https://pixabay.com/api/?key=48545552-fc9a15f1c0e7ed54aeba440c7&q=${search}&page=${page}&per_page=15`)
@@ -23,7 +29,6 @@ const Home = ({ search, page, setPage }) => {
   const Next = () => {
     setPage((prevPage) => prevPage + 1);
   };
-
   return (
     <div className="home-container">
       <div className="image-grid">
