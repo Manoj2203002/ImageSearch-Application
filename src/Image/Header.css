@@ -1,0 +1,129 @@
+/* Header Container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff; /* White Background */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex-wrap: wrap;
+}
+  
+/* Logo Styling */
+.logo h1 {
+    color: #333; /* Dark Grey */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+  
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px; /* Limits the width on larger screens */
+}
+  
+/* Search Input */
+.search-input {
+    flex: 1; /* Makes input take up available space */
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Placeholder Styling */
+.search-input::placeholder {
+    color: #888;
+}
+
+/* Search Input Focus Effect */
+.search-input:focus {
+    border-color: #007bff; /* Blue */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Search Button */
+.search-container button {
+    background: #FF4500; /* Orange Red */
+    color: white;
+    font-size: 1rem;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+/* Button Hover Effect */
+.search-container button:hover {
+    background: #cc3700; /* Darker Orange Red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 100%; /* Allows full width */
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-container button {
+        padding: 12px 15px;
+    }
+}
+
+/* Further Responsive Design for Phones */
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .search-container {
+        display: flex;
+        flex-wrap: nowrap; /* Ensures input and button stay in one line */
+        width: 100%;
+    }
+
+    .search-input {
+        margin: 5px;
+        flex: 1; /* Allows input to adjust its width */
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .search-container button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}

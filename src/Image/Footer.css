@@ -1,0 +1,191 @@
+/* Footer Container */
+.footer {
+  background: #000;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  box-shadow: 0 -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Flex Container */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 30px;
+  gap: 40px;
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1;
+  min-width: 280px;
+  margin: 10px;
+  text-align: left;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #f39c12, #e74c3c);
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Quick Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.footer-links a:hover {
+  color: #f39c12;
+  transform: translateX(5px);
+}
+
+/* Colorful Icons in Links */
+.footer-links li svg {
+  font-size: 1.2rem;
+  color: #f39c12;
+  transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.footer-links li:hover svg {
+  color: #e74c3c;
+  transform: rotate(15deg);
+}
+
+/* Social Icons */
+.footer-socials {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Individual Icon Colors */
+.social-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease-in-out, color 0.3s;
+  text-decoration: none;
+}
+
+/* Facebook */
+.social-icon:nth-child(1) {
+  color: #3b5998;
+}
+
+/* Instagram */
+.social-icon:nth-child(2) {
+  color: #e1306c;
+}
+
+/* Twitter */
+.social-icon:nth-child(3) {
+  color: #1da1f2;
+}
+
+/* Hover Effects */
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+  text-align: center;
+}
+
+/* Subtle Glow Effect */
+.footer-bottom::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #f39c12, transparent);
+  top: 0;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+     
+  }
+
+  .footer-section {
+      text-align: center;
+      margin-top: 0;
+  }
+
+  .footer-links li {
+      justify-content: center;
+      margin: 5px;
+  }
+
+  .footer-socials {
+      justify-content: center;
+  }
+}
+
+/* Mobile View (max 480px width) */
+@media (max-width: 480px) {
+  .footer {
+      padding: 30px 15px;
+  }
+
+  .footer-logo {
+      font-size: 1.6rem;
+  }
+
+  .footer-text {
+      font-size: 0.9rem;
+  }
+
+  .footer-links a {
+      font-size: 0.9rem;
+  }
+
+  .social-icon {
+      font-size: 1.5rem;
+  }
+
+  .footer-bottom {
+      font-size: 0.8rem;
+  }
+}
