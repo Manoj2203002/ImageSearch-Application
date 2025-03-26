@@ -26,7 +26,7 @@ const Preview = () => {
   useEffect(() => {
     if (image && image.tags) {
       axios
-        .get(`https://pixabay.com/api/?key=48545552-fc9a15f1c0e7ed54aeba440c7&q=${image.tags}&per_page=15`)
+        .get(`https://pixabay.com/api/?key=48545552-fc9a15f1c0e7ed54aeba440c7&q=${image.tags.split(',').slice(0,3).join(" ,")}&per_page=15`)
         .then((res) => {
           setRelatedImages(res.data.hits);
         })
@@ -41,9 +41,9 @@ const Preview = () => {
           <div className="selected-image">
             <img src={image.largeImageURL} alt="Selected" className="main-image" />
           </div>
-          <h3 className="related-title">Related Images</h3>
+          <h1>Related Image</h1>
           <div className="related-images">
-            {relatedImages.map((item) => (
+            { relatedImages.length==0 ? <h1>No Related Images Found </h1> : relatedImages.map((item) => (
               <div key={item.id} className="related-card">
                 <Link to={`/Preview/${item.id}`} className="related-link">
                   <img src={item.webformatURL} alt={item.tags} className="related-image" />

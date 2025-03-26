@@ -34,10 +34,6 @@ const Footer = () => {
         </div>
 
       </div>
-
-      <div className="footer-bottom">
-        <p>© 2025 MyGallery. All rights reserved.</p>
-      </div>
     </footer>
   );
 };
